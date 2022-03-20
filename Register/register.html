@@ -1,0 +1,219 @@
+<html>
+<title> Register Here </title>
+<style>
+body{
+background-image: url("index.6.jpg");
+height: 100vh;
+background-size: cover;
+background-position: center;
+}
+
+*{ box-sizing: border-box;}
+body{
+font-family: 'Nanito', sans-serif;
+color: #384047;
+}
+
+form{
+max-width:300px;
+margin:10px auto;
+padding: 10px 20px;
+background: #f4f7f8;
+border-radius: 8px;
+} 
+
+h1{
+margin: 0 0 30px 0;
+text-align: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select{
+background: gba(255,255,255,0.1);
+border: none;
+font-size: 16px;
+height: auto;
+margin: 0;
+outline: 0;
+padding: 15px;
+background-color: #e8eeef;
+color: #8a97a0;
+box-shadow: 0 1px 0 rgba(0,0,0,0,03) inset;
+margin-bottom: 30px;
+}
+
+input: focus, textarea:focus{
+box-shadow: 0 0 5px rgba(81,203,238,1);
+border:1px solid rgba(81,203,238,1);
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+magin: 0 4px 8px 0;
+}
+
+select{
+padding:6px;
+height: 32px;
+border-radius: 2px;
+}
+
+fieldset{
+margin-bottom: 30px;
+border: none;
+}
+
+legend{
+display: block;
+margin-bottom: 8px;
+}
+
+label.light{
+font-weight: 300;
+display: inline;
+}
+
+.section{
+background-color: #5fcf80;
+color: #fff;
+height: 30px
+width: 35px;
+display: inline-block;
+font-size: 0.8em;
+margin-height: 4px;
+line-height: 30px;
+text-align: center;
+text-shadow: 0 1px 0 rbgga(255,255,255,0.2);
+border-radius: 100%;
+}
+
+button{
+padding: 19px 39px 18px 39px;
+color: #FFF;
+background-color: #4bc970;
+font-size: 18px;
+text-align: center;
+font-style: normal;
+border-radius: 5px;
+width: 100%;
+border: 1px solid #3ac162;
+border-width: 1px 1px 3px;
+box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px){
+form{
+max-width: 480px;
+}
+}
+</style>
+<body>
+<form name="myForm" autocomplete="off">
+<h1>Sign Up</h1>
+<fieldset>
+
+First Name:
+<input type="text" name="fname" ><br>
+
+Last Name:
+<input type="text" name="lname" ><br>
+
+Phone No:&nbsp
+<input type="text" name="phone" ><br>
+
+Age:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="age" ><br>
+
+Gender:&nbsp&nbsp&nbsp
+<input type="radio" name="age" value="male" Checked> Male &nbsp&nbsp </input>
+
+<input type="radio" name="age" value="female">Female &nbsp&nbsp </input>
+
+<input type="radio" name="age" value="Others">Others </input>
+<br><br>
+
+Email:&nbsp	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="email" name="email" ><br>
+
+Country:&nbsp&nbsp&nbsp&nbsp
+<select name="country">
+<option>--Select--</option>
+<option>India</option>
+<option>USA</option>
+<option>Austrailia</option>
+<option>England</option>
+<option>France</option>
+</select><br>
+
+Username:
+<input type="text" name="user" ><br>
+
+Password:&nbsp
+<input type="password" name="pass" ><br>
+
+<button type="submit" Onclick= myFunction()>Sign Up</button>
+
+</fieldset>
+</form>
+
+<script type="text/javascript">
+function myFunction(){
+var a = /^[A-Za-z ]{3,30}$/
+var b = /^[A-Za-z ]{3,30}$/
+var c = /^[789]\d{9}$/
+var d = /^[0-9]{2}$/
+var e = /^[A-Za-z_.]{3, }@[A-Za-z]{3, }[.]{1} [A-Za-z.]{2,6}$/
+var f = /^[A-Za-z0-9.]{3,30}$/
+var g = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{5,30}$/
+
+if(a.test(document.myForm.fname.value)==false)
+{
+alert("Enter Valid First Name!");
+}
+
+else if(b.test(document.myForm.lname.value)==false)
+{
+alert("Enter Valid Last Name!");
+}
+
+else if(c.test(document.myForm.phone.value)==false)
+{
+alert("Enter Valid Phone no.!");
+}
+
+else if(d.test(document.myForm.age.value)==false)
+{
+alert("Enter Valid Age!");
+}
+
+else if(e.test(document.myForm.email.value)==false)
+{
+alert("Enter Valid Email Address!");
+}
+
+else if(f.test(document.myForm.user.value)==false)
+{
+alert("Enter Valid Username!");
+}
+
+else if(country=="--Select--")
+{
+alert("Enter Valid Username!");
+}
+
+else if(g.test(document.myForm.pass.value)==false)
+{
+alert("Enter Valid Password!");
+}
+
+else
+{
+alert("You Register Successfully!");
+}
+}
+</script>
+</body>
+</html>
